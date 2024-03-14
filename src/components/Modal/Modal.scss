@@ -1,0 +1,73 @@
+/* Style de la modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+  z-index: 9999; /* S'assurer que l'overlay est au-dessus de tout le contenu */
+}
+
+/* Style de la boîte de contenu de la modal */
+.modal-content {
+  position: fixed;
+  top: 50%; /* La modal sera centrée verticalement */
+  left: 50%; /* La modal sera centrée horizontalement */
+  transform: translate(-50%, -50%); /* Pour centrer la modal */
+  max-width: 30%; /* Réduire la largeur maximale de la modal */
+  max-height: 80%; /* Hauteur maximale de la modal */
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 10000; /* S'assurer que la modal est au-dessus de l'overlay */
+  overflow-y: auto; /* Activation du défilement vertical si le contenu dépasse la hauteur maximale */
+}
+
+/* Ajouter de la marge aux éléments TextField */
+.modal-content .MuiFormControl-root {
+  margin-bottom: 1rem; /* Ajoutez la marge entre chaque élément */
+}
+
+/* Ajouter de la marge en bas au titre */
+.modal-content h2 {
+  margin-bottom: 1rem; /* Ajoutez la marge nécessaire */
+}
+/* Style pour le label des menus déroulants */
+.MuiInputLabel-root[id="orientation-label"],
+.MuiInputLabel-root[id="category-label"] {
+  background-color: white; /* Fond blanc pour le label */
+  min-width: 90px; /* Ajoute un peu de marge intérieure */
+  text-align: center;
+}
+
+.custom-checkbox-label {
+  margin-top: -0.8rem; /* Ajustez la valeur selon vos besoins */
+}
+
+.modal-buttons {
+  .cancel-button {
+    background-color: #838581;
+    color: white;
+    border-color: white;
+    transition: background-color 0.3s, transform 0.3s;
+
+    &:hover { 
+      background-color: #666666; /* Couleur de fond au survol pour le bouton "Annuler" */
+      transform: translateY(2px);
+      border-color: white;
+      }
+    }
+  }
+
+.modal-buttons {
+  .save-button {
+    margin-right: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+
+    &:hover {
+      transform: translateY(2px);
+    }
+  }
+}

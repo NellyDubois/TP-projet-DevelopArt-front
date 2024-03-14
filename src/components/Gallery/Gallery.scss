@@ -1,0 +1,239 @@
+@media only screen and (max-width: 400px) {
+  .gallery_h1 {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 2rem;
+    font-size: 2.3rem;
+  }
+
+  .gallery_grid {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .grid_img {
+    position: relative;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .grid_img_categorie {
+    font-size: 1rem;
+    text-align: center;
+
+    // border: 1px solid white;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 2rem;
+    height: 100%;
+  }
+}
+
+.grid_img_categorie span {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+@media only screen and (min-width: 401px) and (max-width: 1100px) {
+  .gallery_h1 {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 2rem;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    transition: 2s;
+  }
+
+  .gallery_grid {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .grid_img {
+    position: relative;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .grid_img_categorie {
+    font-size: 1.5rem;
+    text-align: center;
+
+    // border: 1px solid white;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 2rem;
+    height: 100%;
+    transition: 2s;
+  }
+
+  .grid_img_categorie span {
+    font-size: 2rem;
+    text-align: center;
+    transition: 2s;
+  }
+}
+
+@media only screen and (min-width: 1100px) and (max-width: 2160px) {
+  .gallery_h1 {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 2rem;
+    font-size: 5rem;
+    margin-bottom: 3rem;
+  }
+
+  .gallery_grid {
+    width: 90%;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 33.33%);
+    grid-gap: 1rem;
+  }
+
+  .grid_img {
+    position: relative;
+    width: 100%;
+  }
+
+  .grid_img_categorie {
+    font-size: 2rem;
+    text-align: right;
+    padding-right: 1rem;
+    width: 100%;
+  }
+
+  .grid_img_categorie span {
+    font-size: 2.5rem;
+    text-align: right;
+  }
+}
+
+@media only screen and (min-width: 2161px) {
+  .gallery_h1 {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 2rem;
+    font-size: 8rem;
+    transition: 2s;
+    margin-bottom: 5rem;
+  }
+
+  .gallery_grid {
+    width: 90%;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 33.33%);
+    grid-gap: 1rem;
+  }
+
+  .grid_img {
+    position: relative;
+    width: 100%;
+  }
+
+  .grid_img_categorie {
+    font-size: 2.5rem;
+    text-align: right;
+    padding-right: 1rem;
+    width: 100%;
+    transition: 2s;
+  }
+
+  .grid_img_categorie span {
+    font-size: 3rem;
+    text-align: right;
+    transition: 2s;
+  }
+}
+
+.button_image {
+  width: 35px;
+  height: 35px;
+  background-color: #838581;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  color: white;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  border-radius: 50%;
+  display: flex;
+  font-size: 16px;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    0px 4px 8px rgba(0, 0, 0, 0.2),
+    0px 8px 16px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s,
+    color 0.3s;
+}
+
+.button_image:hover {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+  background-color: #666666; /* Fond plus foncé au survol */
+  color: #000000;
+}
+
+
+// .gallery_h1 {
+//   width: 50%;
+//   margin: auto;
+//   text-align: center;
+//   padding: 2rem;
+//   font-size: 6vw;
+// }
+
+// .gallery_grid {
+//   width: 80%;
+//   margin: auto;
+
+//   display: grid;
+//   grid-template-columns: repeat(3, 33.33%);
+//   grid-gap: 1rem;
+// }
+
+// .grid_img {
+//   width: 400px;
+//   height: 600px;
+//   // border: 3px solid white;
+// }
+
+// .grid_img_categorie {
+//   font-size: 2rem;
+//   text-align: right;
+//   padding-right: 1rem;
+//   width: 400px;
+//   height: 500px;
+
+//   color: black;
+// }
+
+// .gradient {
+//   // background: linear-gradient(to left, white, black);
+
+//   // background: rgb(255,255,255);
+//   // background: linear-gradient(270deg, rgba(255,255,255,1) 0%, rgba(110,110,110,0.5) 51%, rgba(0,0,0,1) 100%);
+
+//   background: rgb(255, 255, 255);
+//   background: linear-gradient(
+//     270deg,
+//     rgba(255, 255, 255, 1) 0%,
+//     rgba(110, 110, 110, 0.5) 63%,
+//     rgba(0, 0, 0, 1) 100%
+//   );
+// }

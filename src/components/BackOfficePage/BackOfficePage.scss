@@ -1,0 +1,122 @@
+.input-error {
+  border: 2px solid rgb(158, 5, 5);
+  animation: shake 0.3s;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .backOffice_form {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+
+    & input {
+      background-color: white;
+    }
+  }
+
+  fieldset {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+  }
+
+  legend {
+    font-size: 2.5rem;
+  }
+
+  select {
+    margin-bottom: 0.8rem;
+  }
+
+  option {
+    border-radius: 10px;
+  }
+
+  .validButtonBack {
+    width: 10rem;
+    height: 3rem;
+    font-weight: bolder;
+    padding-top: 0.4rem;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(110, 110, 110, 0.5) 100%,
+      rgba(0, 0, 0, 1) 100%
+    );
+    align-self: flex-end;
+    border-radius: 10px;
+    margin-top: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 501px) {
+  .backOffice_form {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+
+    & input {
+      background-color: white;
+    }
+  }
+
+  fieldset {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+  }
+
+  legend {
+    font-size: 2.5rem;
+  }
+
+  select {
+    margin-bottom: 0.8rem;
+  }
+
+  option {
+    border-radius: 10px;
+  }
+
+  .validButtonBack {
+    width: 10rem;
+    height: 3rem;
+    font-weight: bolder;
+    padding-top: 0.4rem;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(110, 110, 110, 0.5) 100%,
+      rgba(0, 0, 0, 1) 100%
+    );
+    align-self: flex-end;
+    border-radius: 10px;
+    margin-top: 0.5rem;
+  }
+}
+
+.fieldset input {
+  background-color: rgb(238, 241, 243);
+}

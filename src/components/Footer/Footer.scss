@@ -1,0 +1,69 @@
+.footer-container {
+  display: flex;
+  justify-content: center; /* Centrer horizontalement */
+  align-items: center; /* Centrer verticalement */
+  background-color: black;
+  height: 60px;
+  border: 1px solid rgb(85, 80, 80);
+  padding: 0 1rem;
+
+  & :link {
+    text-decoration: none;
+  }
+  & :focus {
+    color: rgb(255, 105, 180);
+  }
+  & :visited {
+    color: rgb(255, 105, 180);
+  }
+}
+
+.footer-content {
+  display: flex;
+  align-items: center; /* Centrer verticalement */
+}
+
+.footer_p {
+  margin: 0;
+  font-size: 1rem;
+  color: white;
+}
+
+.footer_nav {
+  color: white;
+  text-decoration: none;
+}
+
+.footer_nav:focus,
+.footer_nav:visited {
+  color: white;
+}
+
+.space {
+  margin-right: 30px; /* Espace entre les logos et "Mentions Légales" */
+}
+
+.social-icons {
+  display: flex;
+  align-items:center;
+}
+
+.icons-container {
+  display: flex;
+  align-items: center; /* Centrer verticalement */
+  column-gap: 15px; /* Espacement entre les icônes */
+}
+
+.icons-container a {
+  transition: transform 0.3s ease; /* Ajout d'une transition sur la transformation */
+}
+
+.icons-container a:hover {
+  transform: scale(1.2); /* Zoom au survol */
+}
+
+// .icons-container a {
+//   color: rgb(255, 105, 180);
+// }
+
+

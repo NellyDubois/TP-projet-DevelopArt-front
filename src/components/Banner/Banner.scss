@@ -1,0 +1,56 @@
+.banner {
+  height: 35vh;
+
+  // background-image: url('../../../public/img/plantes.jpg');
+
+  background-image: url('/img/plantes.jpg');
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner_title {
+  font-size: 7rem;
+}
+
+.banner_logo {
+  display: block;
+  width: 10%;
+  margin: auto;
+  padding-top: 1%;
+}
+
+// .banner_img {
+//   display: block;
+//   width: 15%;
+//   margin: auto;
+//   padding-top: 5%;
+// }
+
+@media only screen and (max-width: 400px) {
+  // .banner_title {
+  //   font-size: 3rem;
+  //   transition: 2s;
+  // }
+
+  .banner_logo {
+    display: block;
+    width: 35%;
+    margin: auto;
+    padding-top: 1%;
+  }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 800px) {
+  // .banner_title {
+  //   font-size: 5rem;
+  //   transition: 2s;
+  // }
+
+  .banner_logo {
+    display: block;
+    width: 23%;
+    margin: auto;
+    padding-top: 1%;
+  }
+}

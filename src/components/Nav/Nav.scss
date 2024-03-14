@@ -1,0 +1,110 @@
+@use 'sass:color';
+@use 'src/styles/_variables';
+
+@media only screen and (max-width: 800px) {
+  .header_nav {
+    // height: 60px;
+    // background-color: black;
+    // color: white;
+    border-top: 1px solid rgb(85, 80, 80);
+    border-bottom: 1px solid rgb(85, 80, 80);
+    font-size: 1.2rem;
+    height: 12rem;
+
+    // ci-dessous equivaut à .header_nav_ul :
+    &_ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      align-items: center;
+    }
+
+    // &_li {
+    //   line-height: 60px; // Assurez-vous que cette valeur correspond à la hauteur de votre élément
+    // }
+  }
+
+  // .navLink:link  {
+  //   color: white;
+
+  // }
+
+  // .navLink:visited {
+  //   color: white;
+  // }
+
+  // .navLink:focus {
+  //   color: white;
+  // }
+
+  // .navLink:hover {
+  //   color: white;
+  //   font-size: 1.2rem;
+  //   transition-duration: 1s;
+
+  // }
+
+  .navLink:active {
+    color: goldenrod;
+    transition-duration: 0.2s;
+  }
+
+  .navLink {
+    color: inherit;
+  }
+}
+
+@media only screen and (min-width: 801px) {
+  .header_nav {
+    // height: 60px;
+    // background-color: black;
+    // color: white;
+    border-top: 1px solid rgb(85, 80, 80);
+    border-bottom: 1px solid rgb(85, 80, 80);
+    font-size: 1.5rem;
+
+    // ci-dessous equivaut à .header_nav_ul :
+    &_ul {
+      display: flex;
+      justify-content: space-around;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      align-items: center;
+    }
+
+    // &_li {
+    //   line-height: 60px; // Assurez-vous que cette valeur correspond à la hauteur de votre élément
+    // }
+  }
+
+  // .navLink:link  {
+  //   color: white;
+
+  // }
+
+  // .navLink:visited {
+  //   color: white;
+  // }
+
+  // .navLink:focus {
+  //   color: white;
+  // }
+
+  // .navLink:hover {
+  //   color: white;
+  //   font-size: 1.2rem;
+  //   transition-duration: 1s;
+
+  // }
+
+  .navLink:active {
+    color: goldenrod;
+    transition-duration: 0.2s;
+  }
+
+  .navLink {
+    color: inherit;
+  }
+}

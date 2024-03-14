@@ -1,0 +1,145 @@
+.Toastify__toast {
+  border-radius: 4px; // Bord arrondi pour la pop-up
+  color: #fff; // Couleur du texte
+  font-family: Arial, sans-serif; // Police de caractères
+  font-size: 14px; // Taille de police
+}
+
+.Toastify {
+  position: fixed;
+}
+
+.contact_form_input.shake {
+  animation: shake 0.3s;
+  border: 1px solid rgb(158, 5, 5);
+}
+
+.contact_form_input.shake::placeholder {
+  color: rgb(158, 5, 5);
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-3px); }
+  100% { transform: translateX(0); }
+}
+
+@media only screen and (max-width: 890px) {
+  .contact {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact_adress {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .contact_map {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .google_map {
+    width: 80vw;
+    margin: auto;
+  }
+
+  .contact_form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+
+  .contact_form_input {
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.3rem;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(110, 110, 110, 0.5) 100%,
+      rgba(0, 0, 0, 1) 100%
+    );
+  }
+
+  .Toastify__toast-container {
+    bottom: 1rem; // Réduire la marge inférieure pour placer la pop-up plus haut sur l'écran
+    left: 50%; // Centrage horizontal
+    transform: translateX(-50%);
+  }
+}
+
+@media only screen and (min-width: 891px) {
+  .contact {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem;
+    min-height: 70vh;
+  }
+
+  .contact_map {
+    color: black;
+  }
+
+  .contact_form_input {
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(110, 110, 110, 0.5) 100%,
+      rgba(0, 0, 0, 1) 100%
+    );
+  }
+
+  .validButton {
+    width: 10rem;
+    height: 3rem;
+    font-weight: bolder;
+    padding-top: 0.4rem;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(110, 110, 110, 0.5) 100%,
+      rgba(0, 0, 0, 1) 100%
+    );
+  }
+
+  .custom-info-window {
+    color: black;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .success-message {
+    font-size: 1rem;
+  }
+
+  .error-message {
+    font-size: 1rem;
+  }
+
+  .Toastify__toast-container {
+    bottom: 2rem; // Positionnement au bas de la page
+    left: 50%; // Centrage horizontal
+    transform: translateX(-50%);
+    }
+
+  .tab {
+    padding-left: 1.7rem;
+  }
+}

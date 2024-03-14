@@ -1,0 +1,42 @@
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  transition: opacity 0.3s;
+
+  .circle {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: rgba(128, 128, 128, 0.5);
+    transition: background-color 0.3s;
+  }
+
+  .circle:hover {
+    background-color: rgba(128, 128, 128, 1);
+    transform: scale(1.1);
+  }
+
+  .circle svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    fill: black;
+    transition: fill 0.3s;
+  }
+
+  &.visible {
+    opacity: 1;
+  }
+
+  &.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
