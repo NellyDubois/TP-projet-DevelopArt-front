@@ -1,19 +1,21 @@
-// Generic
-$primary-color: #e52354;
-$alt-color: #ddd;
-$dark-color: #101010;
-$light-color: #fff;
-$gutter: 2rem;
+// Generic=
+// $ permet de définir des variables en Sass (Syntactically Awesome Stylesheets)
+// il suffit de modifier la valeur de la variable une seule fois pour que les changements se propagent automatiquement à tous les endroits où cette variable est utilisée
+$primary-color: #e52354; //stocke la couleur principale utilisée dans l'application
+$alt-color: #ddd; //stocke une couleur alternative
+$dark-color: #101010; //stocke une couleur sombre
+$light-color: #fff; //stocke une couleur claire
+$gutter: 2rem;  //stocke une valeur de marge
 
-// Global
-$global-font: 'Roboto', sans-serif;
+// Global= certaines parties de l'application 
+$global-font: 'Roboto', sans-serif; //stocke la police de caractères utilisée dans l'application
 $global-font-weight: 300;
 
 // Title
-$title-font: 'Oswald', sans-serif;
+$title-font: 'Oswald', sans-serif; //stocke la police de caractères utilisée pour les titres
 $title-font-weight: 500;
 $title-color: #000;
 
 // Post
-$post-text-color: #666;
+$post-text-color: #666; //stocke la couleur du texte utilisée dans les posts
 $post-hover-color: #f7f7f7;

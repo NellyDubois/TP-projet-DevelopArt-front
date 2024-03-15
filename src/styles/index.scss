@@ -1,14 +1,14 @@
-@use "reset";
-@use "variables" as v;
+@use "reset"; //importe le fichier "reset.scss" dans le fichier Sass actuel
+@use "variables" as v; //importe le fichier "variables.scss" dans le fichier Sass actuel et le renomme "v"
 
-:root {
+:root { //styles qui s'appliquent à l'élément racine (<html> dans HTML)
   font-family: 'Big Shoulders Stencil Text', sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+  font-synthesis: none;//désactive la synthèse de police: Cela signifie que le navigateur n'essaiera pas de générer des styles de police gras ou italique s'ils ne sont pas disponibles dans la famille de police spécifiée
+   text-rendering: optimizeLegibility; //optimise la lisibilité du texte: indique au navigateur de privilégier la clarté du texte, même au détriment de la performance. Cela peut inclure l'utilisation de techniques telles que le lissage des bords des caractères pour améliorer la lisibilité du texte à l'écran
+  -webkit-font-smoothing: antialiased; //Cette propriété contrôle le rendu lissé des polices de caractères dans les navigateurs WebKit (comme Safari et Chrome). Lorsqu'elle est définie sur antialiased, comme dans votre exemple, le texte est rendu avec un lissage antialiasing, ce qui améliore la netteté du texte affiché à l'écran.
+  -moz-osx-font-smoothing: grayscale; //Cette propriété contrôle le rendu lissé des polices de caractères dans les navigateurs Mozilla (comme Firefox) sur les systèmes d'exploitation macOS. Elle fonctionne de manière similaire à -webkit-font-smoothing en contrôlant le niveau de lissage appliqué au texte affiché à l'écran.
+  -webkit-text-size-adjust: 100%; //Cette propriété contrôle le dimensionnement automatique du texte dans les navigateurs WebKit lorsqu'ils sont affichés sur des appareils mobiles. La valeur 100% indique au navigateur de ne pas effectuer de redimensionnement automatique du texte en fonction de la taille de l'écran ou du zoom de l'utilisateur, laissant ainsi la taille du texte inchangée. Cela permet de garantir une cohérence de la taille du texte sur différents appareils et orientations d'écran.
 }
