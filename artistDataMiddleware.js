@@ -3,7 +3,7 @@ import { getDataArtist } from "./artistSlice";
 // Middleware servant à récupérer les données de l'artiste à partir de la base de données
 const artistDataMiddleware = (store) => (next) => (action) => {
   if (action.type === 'GET_DATA_ARTIST') {
-    fetch(`${process.env.`}/1`, {
+    fetch(`${process.env.REACT_APP_BASE_URL_BACK`}/1`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',

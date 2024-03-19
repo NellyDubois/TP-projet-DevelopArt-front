@@ -5,7 +5,7 @@ export const handleFetchErrors = async (response) => {
       throw new Error(errorMessage || 'Erreur lors de la soumission du formulaire');
     }
     else {
-        sessionStorage.setItem('messageUpload', "L'image a été téléchargé avec succès !")
+        sessionStorage.setItem('messageUpload', "L'image a été téléchargée avec succès !")
     return response.json();
     }
   };
