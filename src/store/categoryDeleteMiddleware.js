@@ -1,7 +1,7 @@
 const categoryDeleteMiddleware = (store) => (next) => (action) => {
     if (action.type === 'DELETE_CATEGORY') {
         const id = store.getState().categoriesArtist.deleteId
-      fetch(`http://localhost:3000/1/categories/${id}`, {
+      fetch(`${process.env.REACT_APP_BASE_URL_BACK}/1/categories/${id}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',

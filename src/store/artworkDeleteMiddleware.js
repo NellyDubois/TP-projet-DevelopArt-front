@@ -1,7 +1,7 @@
 const artworkDeleteMiddleware = (store) => (next) => (action) => {
     if (action.type === 'DELETE_ARTWORK') {
         const id = store.getState().artwork.deleteId
-      fetch(`http://localhost:3000/1/oeuvres/${id}`, {
+      fetch(`${process.env.REACT_APP_BASE_URL_BACK}/1/oeuvres/${id}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
