@@ -1,7 +1,7 @@
 const categoryUpdateMiddleware = (store) => (next) => (action) => {
     if (action.type === 'UPDATE_CATEGORY') {
         const id = store.getState().categoriesArtist.id
-      fetch(`http://localhost:3000/1/categories/${id}`, {
+      fetch(`${process.env.REACT_APP_BASE_URL_BACK}/categories/${id}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
