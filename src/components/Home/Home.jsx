@@ -88,7 +88,7 @@ export default function Home() {
 
           <div className="container_titreImgArtiste_imgEtPresa">
             <div className="container_titreImgArtiste_img">
-              <img src={artist.path} alt="" />
+              <img src={`${process.env.REACT_APP_BASE_URL_BACK}${artist.path}`} alt="Photo de l'artiste" />
             </div>
             <p className="container_titreImgArtiste_presa">{artist.biography}</p>
           </div>
@@ -101,7 +101,7 @@ export default function Home() {
               to={`/galerie/${item.id}`}
               onClick={() => displayDetailPicture(item.id)}
             >
-          <img src={item.path} alt={item.description} />
+          <img src={`${process.env.REACT_APP_BASE_URL_BACK}${item.path}`} alt={item.description} />
             {artist.logged && (
               <>
               <button type="button" className='button_image' onClick={(event) => {
