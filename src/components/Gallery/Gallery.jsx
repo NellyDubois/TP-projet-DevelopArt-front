@@ -168,7 +168,7 @@ export default function Gallery() {
               onClick={() => displayDetailPicture(item.id)}
             >
               <img
-                src={`${process.env.REACT_APP_BASE_URL_BACK}${item.path}}`}
+                src={`${process.env.REACT_APP_BASE_URL_BACK}${item.path}`}
                 width="100%"
                 alt={item.description}
                 data-id={item.id}
