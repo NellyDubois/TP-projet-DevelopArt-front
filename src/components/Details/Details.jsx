@@ -8,7 +8,7 @@ export default function Details() {
   return (
     <div className="details">
       <div className="details_img">
-        <img src={`${process.env.REACT_APP_BASE_URL_BACK}${detailsArtwork}` alt={detailsArtwork.name} />
+        <img src={`${process.env.REACT_APP_BASE_URL_BACK}${detailsArtwork}`} alt={detailsArtwork.name} />
       </div>
       <div className="details_description">
         <h2 className="details_description titre">"{detailsArtwork.name}"</h2>
