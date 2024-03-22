@@ -186,6 +186,9 @@ export default function Contact() {
         pauseOnHover
         theme="dark"
       /> 
+      <div>
+        <div>Clé API Google Maps : {process.env.REACT_APP_GOOGLE_MAPS_API_KEY}</div>
+      </div>
       <div className="contact_adress">
         <ul>
           <li className="tab">
@@ -299,7 +302,7 @@ export default function Contact() {
             value={story}
             onChange={changeStory}
           ></textarea>
-
+          
           <input
             className="contact_form_input validButton"
             type="submit"
