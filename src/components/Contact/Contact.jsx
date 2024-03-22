@@ -186,9 +186,7 @@ export default function Contact() {
         pauseOnHover
         theme="dark"
       /> 
-      <div>
-        <div>Clé API Google Maps : {process.env.REACT_APP_GOOGLE_MAPS_API_KEY}et : REACT_APP_BASE_URL_BACK={process.env.REACT_APP_BASE_URL_BACK}</div>
-      </div>
+      
       <div className="contact_adress">
         <ul>
           <li className="tab">
