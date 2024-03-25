@@ -1,38 +1,40 @@
 .input-error {
-  border: 2px solid rgb(158, 5, 5);
-  animation: shake 0.3s;
+  border: 2px solid rgb(158, 5, 5); /* Définit une bordure de 2 pixels de couleur rouge */
+  animation: shake 0.3s; /*Définit une animation nommée "shake" avec une durée de 0.3 secondes */
 }
 
+/* @keyframes est une règle CSS qui permet de définir les étapes d'une animation */
 @keyframes shake {
-  0% {
-    transform: translateX(0);
+  0% { /*Début de l'animation*/
+    transform: translateX(0); /* Déplace l'élément horizontalement de 0 pixels */
   }
   25% {
-    transform: translateX(-5px);
+    transform: translateX(-5px); /* Déplace l'élément horizontalement de -5 pixels */
   }
   50% {
-    transform: translateX(5px);
+    transform: translateX(5px); /* Déplace l'élément horizontalement de 5 pixels */
   }
   75% {
-    transform: translateX(-5px);
+    transform: translateX(-5px); /* Déplace l'élément horizontalement de -5 pixels */
   }
-  100% {
-    transform: translateX(0);
+  100% { /*fin de l'animation */
+    transform: translateX(0); /* Déplace l'élément horizontalement de 0 pixels */
   }
 }
 
+/* Définit les styles pour les éléments de classe ".backOffice_form" lorsque la largeur de l'écran est inférieure à 500 pixels */
 @media only screen and (max-width: 500px) {
   .backOffice_form {
-    width: 90%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
+    width: 90%; /* Définit la largeur de l'élément à 90% de la largeur de son conteneur */
+    margin: auto; /* Centre l'élément horizontalement */
+    display: flex; /* Définit l'affichage de l'élément en mode flex */
+    flex-direction: column; /* Définit la direction des éléments enfants en colonne */
 
-    & input {
+    & input { /* Définit les styles pour les éléments input enfants directs de ".backOffice_form" */
       background-color: white;
     }
   }
-
+  
   fieldset {
     display: flex;
     flex-direction: column;
