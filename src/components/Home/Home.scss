@@ -7,20 +7,20 @@
   .containerArtiste {
     display: flex;
     flex-direction: column;
-    width: 96%;
+    max-width: 96%; 
     margin: auto;
   }
 
   .container_titreImgArtisteTexte {
     display: flex;
     flex-direction: column;
-    width: 96%;
+    max-width: 96%; 
     margin: auto;
   }
 
   .container_titreImgArtisteTexte_h1 {
     text-align: center;
-    width: 86%;
+    max-width: 86%; 
     margin: auto;
     font-size: 1.8rem;
     padding-bottom: 1rem;
@@ -28,13 +28,13 @@
   }
 
   .container_titreImgArtiste_imgEtPresa {
-    width: 80%;
+    max-width: 80%; 
     margin: auto;
     padding-bottom: 0.5rem;
   }
 
   .container_titreImgArtiste_img {
-    width: 100%;
+    max-width: 100%; 
     margin: auto;
   }
 
@@ -47,12 +47,12 @@
   .container_presa_oeuvres {
     display: flex;
     flex-direction: column;
-    width: 80%;
+    max-width: 80%; 
     margin: auto;
   }
 
   .container_photo {
-    width: 100%;
+    max-width: 100%; 
     margin: auto;
     padding: 0.7rem;
   }
@@ -67,20 +67,20 @@
   .containerArtiste {
     display: flex;
     flex-direction: column;
-    width: 96%;
+    max-width: 96%;
     margin: auto;
   }
 
   .container_titreImgArtisteTexte {
     display: flex;
     flex-direction: column;
-    width: 96%;
+    max-width: 96%;
     margin: auto;
   }
 
   .container_titreImgArtisteTexte_h1 {
     text-align: center;
-    width: 76%;
+    max-width: 76%;
     margin: auto;
     font-size: 3rem;
     padding-bottom: 2rem;
@@ -89,14 +89,14 @@
   }
 
   .container_titreImgArtiste_imgEtPresa {
-    width: 80%;
+    max-width: 80%;
     margin: auto;
     padding-bottom: 1.5rem;
     transition: 2s;
   }
 
   .container_titreImgArtiste_img {
-    width: 90%;
+    max-width: 90%;
     margin: auto;
   }
 
@@ -109,12 +109,12 @@
   .container_presa_oeuvres {
     display: flex;
     flex-direction: column;
-    width: 86%;
+    max-width: 86%;
     margin: auto;
   }
 
   .container_photo {
-    width: 100%;
+    max-width: 100%;
     padding-bottom: 2rem;
     margin: auto;
   }
@@ -129,31 +129,31 @@
   .containerArtiste {
     margin: 4rem;
     display: flex;
-    width: 100%;
+    max-width: 100%;
   }
 
   .container_titreImgArtisteTexte {
     display: flex;
     flex-direction: column;
-    width: 40%;
+    max-width: 40%;
   }
 
   .container_titreImgArtisteTexte_h1 {
     text-align: left;
-    width: 100%;
+    max-width: 100%;
     font-size: 4rem;
     padding-bottom: 1rem;
     transition: 2s;
   }
 
   .container_titreImgArtiste_imgEtPresa {
-    width: 100%;
+    max-width: 100%;
     padding-bottom: 0.5rem;
   }
 
   .container_titreImgArtiste_img {
     float: left;
-    width: 50%;
+    max-width: 50%;
     padding-right: 1rem;
   }
 
@@ -165,19 +165,19 @@
 
   .container_presa_oeuvres {
     display: flex;
-    width: 60%;
+    max-width: 60%;
     margin-left: 3rem;
   }
 
   .container_presa_oeuvres {
     display: flex;
     flex-direction: column;
-    width: 60%;
+    max-width: 60%;
     margin-left: 1.5rem;
   }
 
   .container_photo {
-    width: 90%;
+    max-width: 90%;
     margin: auto;
     padding: 1rem;
   }
@@ -192,7 +192,7 @@
   .containerArtiste {
     margin: 4rem;
     display: flex;
-    width: 100%;
+    max-width: 100%;
     align-items: center; /*alignés verticalement au centre*/
   }
 
@@ -200,26 +200,26 @@
   .container_titreImgArtisteTexte {
     display: flex;
     flex-direction: column;
-    width: 40%;
+    max-width: 40%;
   }
 
   .container_titreImgArtisteTexte_h1 {
     text-align: left; /*alignement du texte à gauche*/
-    width: 100%;
+    max-width: 100%;
     font-size: 7rem;
     padding-bottom: 1rem;
     transition: 2s;
   }
 
   .container_titreImgArtiste_imgEtPresa {
-    width: 100%;
+    max-width: 100%;
     padding-bottom: 0.5rem;
   }
 
   /*Les images seront alignées sur le bord gauche de leur conteneur, et le contenu suivant sera affiché à droite de ces images, comme si elles flottaient du côté gauche du conteneur.*/
   .container_titreImgArtiste_img {
     float: left; 
-    width: 50%;
+    max-width: 50%;
     padding-right: 1rem;
   }
 
@@ -230,13 +230,13 @@
 
   .container_presa_oeuvres {
     display: flex;
-    width: 60%;
+    max-width: 60%;
     margin-left: 1.5rem;
     height: 600px;
   }
 
   .container_photo {
-    width: 100%;
+    max-width: 100%;
     margin: 1.5rem;
   }
 
@@ -249,7 +249,8 @@
 .container_photo {
   position: relative;
 }
- 
+
+ /*Boutons modification et suppression images*/
 .button_image {
   width: 35px;
   height: 35px;
@@ -258,23 +259,23 @@
   border: none;
   cursor: pointer; /* Change le curseur de la souris en une main lorsqu'il survole les boutons, indiquant qu'ils sont cliquables.*/
   color: white;
-  position: absolute; /*Positionne les boutons de manière absolue par rapport à leur conteneur parent.*/
+  position: absolute; /*Positionne les boutons de manière absolue en haut à droite de l'image concernée*/
   top: 25px;
   right: 25px;
-  border-radius: 50%;
-  display: flex;
+  border-radius: 50%; /*pour faire des boutons ronds*/
+  display: flex; /*utilisé pour permettre le centrage vertical et horizontal du contenu des boutons.*/
   font-size: 16px;
   align-items: center;
   justify-content: center;
-  box-shadow:
+  box-shadow: /*ajoute une ombre aux boutons pour créer un effet de profondeur*/
     0px 4px 8px rgba(0, 0, 0, 0.2),
     0px 8px 16px rgba(0, 0, 0, 0.1);
-  transition:
+  transition: /*pour spécifier une transition fluide lors du changement des propriétés des boutons*/
     transform 0.3s ease,
     background-color 0.3s,
     color 0.3s;
-  
-  &_trash {
+  /*& en .scss utilisé dans une règle imbriquée pour créer un sélecteur CSS qui combine le sélecteur parent avec le suffixe _trash. Lorsque cette règle est compilée en CSS, elle créera des sélecteurs CSS qui correspondent à la classe parente suivie de la classe _trash*/
+    &_trash {
     width: 35px;
     height: 35px;
     background-color: #838581;
@@ -300,7 +301,7 @@
   
   }
 }
-
+/*au survol du bouton crayon*/
 .button_image:hover {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
   transform: scale(1.1);
