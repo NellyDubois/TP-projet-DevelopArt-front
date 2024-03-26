@@ -25,7 +25,7 @@ export default function LoginForm({
   const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <div className="login-form">
+    <section className="login-form">
       {isLogged && ( // Cette partie de composant sera affiché une fois que l'artiste sera connecté sinon ça affiche l'autre partie
         <div className="login-form-logged">
           <p className="login-form-message">{loggedMessage}</p>
@@ -33,6 +33,7 @@ export default function LoginForm({
             type="button"
             className="login-form-logged-button"
             onClick={handleLogout}
+            aria-label="Déconnexion"
           >
             Déconnexion
           </button>
@@ -59,6 +60,7 @@ export default function LoginForm({
             <IconButton
               className="password-toggle"
               onClick={() => setShowPassword(!showPassword)}
+              aria-label={showPassword ? 'Masquer le mot de passe' : 'Afficher le mot de passe'} 
             >
               {showPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
             </IconButton>
@@ -74,6 +76,6 @@ export default function LoginForm({
           </fieldset>
         </form>
       )}
-    </div>
+    </section>
   );
 }

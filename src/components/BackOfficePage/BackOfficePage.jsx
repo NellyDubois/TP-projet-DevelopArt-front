@@ -503,7 +503,7 @@ export default function BackOfficePage() {
         <input
           className="validButtonBack"
           type="submit"
-          value="Enregistrer les modifs"
+          value="Enregistrer les modifications"
           onClick={configRegister}
         />
       </form>

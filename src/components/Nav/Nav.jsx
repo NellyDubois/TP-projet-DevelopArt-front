@@ -40,31 +40,31 @@ export default function Nav() {
   };
 
   return (
-    <nav className="header_nav" style={{ color: font_color, backgroundColor: background_color_nav }}>
+    <nav className="header_nav" style={{ color: font_color, backgroundColor: background_color_nav }} aria-label="Menu principal">
       <ul className="header_nav_ul">
         <li className="header_nav_ul_li">
-          <NavLink to="/" className="navLink">Accueil</NavLink>
+          <NavLink to="/" className="navLink" aria-label="Accueil">Accueil</NavLink>
         </li>
 
         <li className="header_nav_ul_li">
-          <NavLink to="/galerie" className="navLink">Galerie</NavLink>
+          <NavLink to="/galerie" className="navLink" aria-label="Galerie">Galerie</NavLink>
         </li>
 
         <li className="header_nav_ul_li">
-          <NavLink to="/contact" className="navLink">Contact</NavLink>
+          <NavLink to="/contact" className="navLink" aria-label="Contact">Contact</NavLink>
         </li>
 
         {isLogged && (
           <li className="header_nav_ul_li">
-            <NavLink to="/:artiste/personnalisation" className="navLink">Personnalisation</NavLink>
+            <NavLink to="/:artiste/personnalisation" className="navLink" aria-label="Personnalisation">Personnalisation</NavLink>
           </li>
         )}
 
         <li className="header_nav_ul_li">
           {isLogged ? (
-            <NavLink to="#" onClick={handleLogoutClick} className="navLink">Se déconnecter</NavLink>
+            <NavLink to="#" onClick={handleLogoutClick} className="navLink" aria-label="Se déconnecter">Se déconnecter</NavLink>
           ) : (
-            <NavLink to="/connexion" className="navLink">Se connecter</NavLink>
+            <NavLink to="/connexion" className="navLink" aria-label="Se connecter">Se connecter</NavLink>
           )}
         </li>
         
@@ -81,10 +81,8 @@ export default function Nav() {
             </DialogContentText>
           </DialogContent>
           <DialogActions>
-            <Button onClick={handleLogout}>Oui</Button>
-            <Button onClick={handleClose} autoFocus>
-              Non
-            </Button>
+            <Button onClick={handleLogout} aria-label="Confirmer la déconnexion">Oui</Button>
+            <Button onClick={handleClose} aria-label="Annuler la déconnexion" autoFocus>Non</Button>
           </DialogActions>
         </Dialog>
       </ul>

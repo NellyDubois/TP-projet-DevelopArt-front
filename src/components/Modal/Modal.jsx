@@ -122,6 +122,7 @@ export default function CustomModal({ artwork, onClose }) {
           value={newArtworkName}
           onChange={handleNameChange}
           fullWidth
+          aria-label="Nom de l'œuvre"
         />
         <TextField
           type="number"
@@ -129,6 +130,7 @@ export default function CustomModal({ artwork, onClose }) {
           value={newArtworkWidth}
           onChange={handleWidthChange}
           fullWidth
+          aria-label="Largeur de l'œuvre"
         />
         <TextField
           type="number"
@@ -136,24 +138,28 @@ export default function CustomModal({ artwork, onClose }) {
           value={newArtworkHeight}
           onChange={handleHeightChange}
           fullWidth
+          aria-label="Hauteur de l'œuvre"
         />
         <TextField
           label="Technique"
           value={newArtworkTechnique}
           onChange={handleTechniqueChange}
           fullWidth
+          aria-label="Technique de l'œuvre"
         />
         <TextField
           label="Support"
           value={newArtworkMedia}
           onChange={handleMediaChange}
           fullWidth
+          aria-label="Support de l'œuvre"
         />
         <TextField
           label="Citation"
           value={newArtworkQuote}
           onChange={handleQuoteChange}
           fullWidth
+          aria-label="Citation de l'œuvre"
         />
         <TextField
           type="date"
@@ -161,6 +167,7 @@ export default function CustomModal({ artwork, onClose }) {
           value={newArtworkProductionYear}
           onChange={handleProductionYearChange}
           fullWidth
+          aria-label="Date de réalisation de l'œuvre"
         />
         <FormControl fullWidth>
           <InputLabel id="orientation-label">Orientation</InputLabel>
@@ -229,6 +236,7 @@ export default function CustomModal({ artwork, onClose }) {
             onClick={handleSubmit}
             variant="contained"
             className="save-button"
+            aria-label="Enregistrer les modifications"      
           >
             Enregistrer
           </Button>
@@ -236,6 +244,7 @@ export default function CustomModal({ artwork, onClose }) {
             onClick={onClose}
             variant="outlined"
             className="cancel-button"
+            aria-label="Annuler les modifications"
           >
             Annuler
           </Button>
