@@ -6,12 +6,12 @@ export default function Details() {
   const detailsArtwork = useSelector((state) => state.details.list);
 
   return (
-    <div className="details">
-      <div className="details_img">
-        <img src={`${process.env.REACT_APP_BASE_URL_BACK}/${detailsArtwork.path}`} alt={detailsArtwork.name} />
-      </div>
-      <div className="details_description">
-        <h2 className="details_description titre">"{detailsArtwork.name}"</h2>
+    <article className="details" aria-label="Détails de l'œuvre d'art">
+      <figure className="details_img">
+        <img src={`${process.env.REACT_APP_BASE_URL_BACK}/${detailsArtwork.path}`} alt={`Oeuvre d'art nommée ${detailsArtwork.name}`}/>
+      </figure>
+      <section className="details_description">
+        <h1 className="details_description titre">"{detailsArtwork.name}"</h1>
         <p className="details_description citation">{detailsArtwork.quote}</p>
         <p className="details_description description">
           {detailsArtwork.description}
@@ -26,7 +26,7 @@ export default function Details() {
           Dimensions : largeur : {detailsArtwork.width} cm et hauteur :
           {detailsArtwork.height} cm
         </p>
-      </div>
-    </div>
+      </section>
+    </article>
   );
 }

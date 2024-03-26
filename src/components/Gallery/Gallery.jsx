@@ -131,12 +131,12 @@ export default function Gallery() {
     });
   }
   return (
-    <div className="gallery">
+    <main className="gallery" aria-label="Galerie de {artist.firstname} {artist.lastname}">
       <h1 className="gallery_h1">
         GALERIE by {artist.firstname} {artist.lastname}
       </h1>
 
-      <div className="gallery_grid">
+      <nav className="gallery_grid">
         <div className="grid_img_categorie gradient">
           <ul>
             <span>CATEGORIES</span>
@@ -162,7 +162,7 @@ export default function Gallery() {
           </ul>
         </div>
         {showByCategory(selectedCategory).map((item) => (
-          <div className="grid_img" key={item.id} name={item.name}>
+          <article className="grid_img" key={item.id} name={item.name}>
             <NavLink
               to={`/galerie/${item.id}`}
               onClick={() => displayDetailPicture(item.id)}
@@ -183,6 +183,7 @@ export default function Gallery() {
                       event.stopPropagation(); // Empêche la propagation de l'événement au parent
                       openModal(item);
                     }}
+                    aria-label="Modifier l'oeuvre"
                   >
                     <FaPencilAlt className="icon" />
                   </button>
@@ -192,9 +193,9 @@ export default function Gallery() {
                     onClick={(event) => {
                       event.preventDefault();
                       event.stopPropagation(); // Empêche la propagation de l'événement au parent
-
                       handleDeleteClick(item.id);
                     }}
+                    aria-label="Supprimer l'oeuvre"
                   >
                     <FaTrash className="icon" />
                   </button>
@@ -203,27 +204,9 @@ export default function Gallery() {
             </NavLink>
 
             {/* <Route path="/galerie/:oeuvre" element={<Details />} /> */}
-          </div>
+          </article>
         ))}
-
-        {/* <div className="grid_img statue">
-          {/* <img src="./images/statue.jpg" width="100% " alt=""/> */}
-        {/* </div> */}
-        {/* <div className="grid_img">
-          {/* <img src="./images/voielactée.jpg" width="100%" alt=""/> */}
-        {/* </div> */}
-        {/* <div className="grid_img">
-          {/* <img src="./images/mannequinAsiatDebout.jpg"  width="100%" alt=""/> */}
-        {/* </div> */}
-        {/* <div className="grid_img test">
-          {/* <img src="./images/asiatfemme.jpg" width="100%" alt=""/> */}
-        {/* </div> */}
-        {/* // <div className="grid_img"> */}
-        {/* <img src="./images/hommeClassique.jpg" width="100%"  alt=""/> */}
-        {/* // </div> */}
-        {/* // <div className="grid_img tutu"> */}
-        {/* <img src="./images/classiqueFemmeRose.jpg" width="100%" alt=""/> */}
-        {/* // </div>  */}
+       
         <ToastContainer
           position="bottom-center"
           autoClose={5000}
@@ -251,16 +234,14 @@ export default function Gallery() {
             </DialogContentText>
           </DialogContent>
           <DialogActions>
-            <Button onClick={handleDelete}>Oui</Button>
-            <Button onClick={handleClose} autoFocus>
-              Non
-            </Button>
+            <Button onClick={handleDelete} aria-label="Confirmer la suppression">Oui</Button>
+            <Button onClick={handleClose} autoFocus aria-label="Annuler la suppression">Non</Button>
           </DialogActions>
         </Dialog>
         {isModalOpen && (
           <Modal artwork={selectedArtwork} onClose={closeModal} />
         )}
-      </div>
-    </div>
+      </nav>
+    </main>
   );
 }

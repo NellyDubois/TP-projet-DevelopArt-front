@@ -23,8 +23,6 @@
   .grid_img_categorie {
     font-size: 1rem;
     text-align: center;
-
-    // border: 1px solid white;
     width: 50%;
     margin: auto;
     margin-bottom: 2rem;
@@ -64,8 +62,6 @@
   .grid_img_categorie {
     font-size: 1.5rem;
     text-align: center;
-
-    // border: 1px solid white;
     width: 50%;
     margin: auto;
     margin-bottom: 2rem;
@@ -93,7 +89,6 @@
   .gallery_grid {
     width: 90%;
     margin: auto;
-
     display: grid;
     grid-template-columns: repeat(3, 33.33%);
     grid-gap: 1rem;
@@ -131,7 +126,6 @@
   .gallery_grid {
     width: 90%;
     margin: auto;
-
     display: grid;
     grid-template-columns: repeat(3, 33.33%);
     grid-gap: 1rem;
@@ -190,50 +184,3 @@
 }
 
 
-// .gallery_h1 {
-//   width: 50%;
-//   margin: auto;
-//   text-align: center;
-//   padding: 2rem;
-//   font-size: 6vw;
-// }
-
-// .gallery_grid {
-//   width: 80%;
-//   margin: auto;
-
-//   display: grid;
-//   grid-template-columns: repeat(3, 33.33%);
-//   grid-gap: 1rem;
-// }
-
-// .grid_img {
-//   width: 400px;
-//   height: 600px;
-//   // border: 3px solid white;
-// }
-
-// .grid_img_categorie {
-//   font-size: 2rem;
-//   text-align: right;
-//   padding-right: 1rem;
-//   width: 400px;
-//   height: 500px;
-
-//   color: black;
-// }
-
-// .gradient {
-//   // background: linear-gradient(to left, white, black);
-
-//   // background: rgb(255,255,255);
-//   // background: linear-gradient(270deg, rgba(255,255,255,1) 0%, rgba(110,110,110,0.5) 51%, rgba(0,0,0,1) 100%);
-
-//   background: rgb(255, 255, 255);
-//   background: linear-gradient(
-//     270deg,
-//     rgba(255, 255, 255, 1) 0%,
-//     rgba(110, 110, 110, 0.5) 63%,
-//     rgba(0, 0, 0, 1) 100%
-//   );
-// }
