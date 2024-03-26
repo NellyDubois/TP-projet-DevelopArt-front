@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Develop'Art React App",
+  "name": "Develop'Art developped with React and Redux",
   "icons": [
     {
       "src": "favicon.ico",

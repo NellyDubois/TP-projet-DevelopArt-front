@@ -14,3 +14,4 @@ export const uploadArtworkToServer = async (formDataToSend) => {
   // La fonction handleFetchErrors est appelée pour gérer les erreurs de la requête fetch
   return handleFetchErrors(response);
 };
+

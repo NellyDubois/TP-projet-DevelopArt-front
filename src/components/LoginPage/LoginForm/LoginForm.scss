@@ -7,6 +7,10 @@
     width: 50%;
     margin: auto;
     padding: 3rem 0rem;
+
+    @media (max-width: 600px) {
+      width: 95%;
+    }
   }
 
   &-fieldset {
@@ -16,15 +20,27 @@
 
   &-label {
     font-size: 2rem;
+
+    @media (max-width: 600px) {
+      font-size: 1.5rem;
+    }
   }
 
   &-message {
     margin: 0.3em 1em;
     font-size: 4rem;
+
+    @media (max-width: 600px) {
+      font-size: 2rem;
+    }
   }
 
   &-legend {
     font-size: 4rem;
+
+    @media (max-width: 600px) {
+      font-size: 2rem;
+    }
   }
 
   &-logged {

@@ -1,3 +1,4 @@
+/* Pour les écrans de petite taille (type smartphone en mode portait)*/
 @media only screen and (max-width: 400px) {
   main {
     display: flex;
@@ -57,6 +58,7 @@
   }
 }
 
+/* Pour les écrans de taille moyenne (type tablette)*/
 @media only screen and (min-width: 401px) and (max-width: 1100px) {
   main {
     display: flex;
@@ -118,7 +120,8 @@
   }
 }
 
-@media only screen and (min-width: 1100px) and (max-width: 2160px) {
+/* Pour les écrans de grande taille (type ordinateur)*/
+@media only screen and (min-width: 1101px) and (max-width: 2160px) {
   main {
     display: flex;
   }
@@ -169,7 +172,6 @@
   .container_presa_oeuvres {
     display: flex;
     flex-direction: column;
-
     width: 60%;
     margin-left: 1.5rem;
   }
@@ -181,6 +183,7 @@
   }
 }
 
+/*Pour les écrans de très grande taille (type grand écran)*/
 @media only screen and (min-width: 2161px) {
   main {
     display: flex;
@@ -190,9 +193,10 @@
     margin: 4rem;
     display: flex;
     width: 100%;
-    align-items: center;
+    align-items: center; /*alignés verticalement au centre*/
   }
 
+  /*la présentation de l'artiste occupe 40% en largeur donc il reste 60% pour les 3 oeuvres*/
   .container_titreImgArtisteTexte {
     display: flex;
     flex-direction: column;
@@ -200,7 +204,7 @@
   }
 
   .container_titreImgArtisteTexte_h1 {
-    text-align: left;
+    text-align: left; /*alignement du texte à gauche*/
     width: 100%;
     font-size: 7rem;
     padding-bottom: 1rem;
@@ -212,8 +216,9 @@
     padding-bottom: 0.5rem;
   }
 
+  /*Les images seront alignées sur le bord gauche de leur conteneur, et le contenu suivant sera affiché à droite de ces images, comme si elles flottaient du côté gauche du conteneur.*/
   .container_titreImgArtiste_img {
-    float: left;
+    float: left; 
     width: 50%;
     padding-right: 1rem;
   }
@@ -235,6 +240,7 @@
     margin: 1.5rem;
   }
 
+  /*Le deuxième enfant direct de .container_presa_oeuvres sera aligné au bas du conteneur.*/
   .container_presa_oeuvres > *:nth-child(2) {
     align-self: flex-end;
   }
@@ -243,16 +249,16 @@
 .container_photo {
   position: relative;
 }
-
+ 
 .button_image {
   width: 35px;
   height: 35px;
   background-color: #838581;
   padding: 0;
   border: none;
-  cursor: pointer;
+  cursor: pointer; /* Change le curseur de la souris en une main lorsqu'il survole les boutons, indiquant qu'ils sont cliquables.*/
   color: white;
-  position: absolute;
+  position: absolute; /*Positionne les boutons de manière absolue par rapport à leur conteneur parent.*/
   top: 25px;
   right: 25px;
   border-radius: 50%;
