@@ -173,7 +173,9 @@ export default function Contact() {
   }
 
   return (
-    <div className="contact">
+    <main className="contact">
+      <h1 className="contact_title">Contactez-nous</h1>
+      
       <ToastContainer 
         position="bottom-center"
         autoClose={5000}
@@ -186,129 +188,138 @@ export default function Contact() {
         pauseOnHover
         theme="dark"
       /> 
-      
-      <div className="contact_adress">
-        <ul>
-          <li className="tab">
-            {artist.firstname} {artist.lastname}
-          </li>
-          <li><Mail /> {artist.email}</li>
-          <li><Phone /> {artist.phone}</li>
-          <li><Place />
-            {artist.street_no} {artist.street_name}
-          </li>
-          <li className="tab">
-            {artist.zipcode} {artist.city}
-          </li>
-          <br />
-          <div className="contact_map">
-            {isLoaded && center && (
-              <GoogleMap
-                className="google_map"
-                mapContainerStyle={{
-                  width: '100%',
-                  height: '200px',
-                }}
-                center={center}
-                zoom={10}
-              >
-                <Marker position={center} onClick={handleMarkerClick} />
-                {infoWindowOpen && center && (
-                  <InfoWindow
-                    position={center}
-                    onCloseClick={() => setInfoWindowOpen(false)}
-                    options={{
-                      maxWidth: 200,
-                      pixelOffset: new window.google.maps.Size(0, -30),
-                      className: 'custom-info-window',
-                    }}
-                  >
-                    <div>
-                      <h3>Adresse:</h3>
-                      <p>
-                        {artist.street_no} {artist.street_name},{' '}
-                        {artist.zipcode} {artist.city}
-                      </p>
-                    </div>
-                  </InfoWindow>
-                )}
-              </GoogleMap>
-            )}
-          </div>
-        </ul>
+  
+      <div className="contact_sections">
+        <section className="contact_adress">
+          <ul>            
+            <li className="li-logo tab"><Mail /> {artist.email}</li>
+            <li className="li-logo tab"><Phone /> {artist.phone}</li>
+            <li className="tab">
+              {artist.firstname} {artist.lastname}
+            </li>
+            <li className="li-logo tab"><Place />
+              {artist.street_no} {artist.street_name}
+            </li>
+            <li className="tab">
+              {artist.zipcode} {artist.city}
+            </li>
+            <br />
+            <div className="contact_map">
+              {isLoaded && center && (
+                <GoogleMap
+                  className="google_map"
+                  mapContainerStyle={{
+                    width: '100%',
+                    height: '200px',
+                  }}
+                  center={center}
+                  zoom={10}
+                >
+                  <Marker position={center} onClick={handleMarkerClick} />
+                  {infoWindowOpen && center && (
+                    <InfoWindow
+                      position={center}
+                      onCloseClick={() => setInfoWindowOpen(false)}
+                      options={{
+                        maxWidth: 200,
+                        pixelOffset: new window.google.maps.Size(0, -30),
+                        className: 'custom-info-window',
+                      }}
+                    >
+                      <div>
+                        <h3>Adresse:</h3>
+                        <p>
+                          {artist.street_no} {artist.street_name},{' '}
+                          {artist.zipcode} {artist.city}
+                        </p>
+                      </div>
+                    </InfoWindow>
+                  )}
+                </GoogleMap>
+              )}
+            </div>
+          </ul>
+        </section>
+
+        <section className="contact_form">
+          <h2>Formulaire de contact</h2>
+          <form action="post" onSubmit={submitContact}>
+            <label htmlFor="firstname">Prénom</label>
+            <input
+              className="contact_form_input"
+              type="text"
+              name="firstname"
+              id="firstname"
+              placeholder="Prénom"
+              value={firstname}
+              onChange={changeFirstname}
+            />
+
+            <label htmlFor="familyname">Nom</label>
+            <input
+              className="contact_form_input"
+              type="text"
+              name="familyName"
+              id="familyname"
+              placeholder="Nom"
+              value={lastname}
+              onChange={changeLastname}
+            />
+
+            <label htmlFor="phone">Téléphone</label>
+            <input
+              className="contact_form_input"
+              type="tel"
+              name="phone"
+              id="phone"
+              placeholder="Téléphone"
+              value={phone}
+              onChange={changePhone}
+            />
+
+            <label htmlFor="email">Adresse email*</label>
+            <input
+              className={`contact_form_input ${!email && shakeFields && 'shake'}`}
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Adresse email*"
+              value={email}
+              onChange={changeEmail}
+            />
+
+            <label htmlFor="objectEmail">Objet</label>  
+            <input
+              className="contact_form_input"
+              type="text"
+              name="objectEmail"
+              id="objectEmail"
+              placeholder="Objet"
+              value={objectEmail}
+              onChange={changeObjectEmail}
+            />
+
+            <label htmlFor="story">Message*</label>
+            <textarea
+              className={`contact_form_input ${!story && shakeFields && 'shake'}`}
+              id="story"
+              name="story"
+              rows="3"
+              cols="20"
+              placeholder="Message*"
+              value={story}
+              onChange={changeStory}
+            ></textarea>
+            
+            <input
+              className="contact_form_input validButton"
+              type="submit"
+              value="Valider"
+              onClick={submitContact}
+            />
+          </form>
+        </section>        
       </div>
-      <div className="contact_form">
-        Formulaire de contact
-        <form action="post" onSubmit={submitContact}>
-          <input
-            className="contact_form_input"
-            type="text"
-            name="firstname"
-            id="firstname"
-            placeholder="Prénom"
-            value={firstname}
-            onChange={changeFirstname}
-          />
-
-          <input
-            className="contact_form_input"
-            type="text"
-            name="familyName"
-            id="familyname"
-            placeholder="Nom"
-            value={lastname}
-            onChange={changeLastname}
-          />
-
-          <input
-            className="contact_form_input"
-            type="tel"
-            name="phone"
-            id="phone"
-            placeholder="Téléphone"
-            value={phone}
-            onChange={changePhone}
-          />
-
-          <input
-            className={`contact_form_input ${!email && shakeFields && 'shake'}`}
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Adresse email*"
-            value={email}
-            onChange={changeEmail}
-          />
-
-          <input
-            className="contact_form_input"
-            type="text"
-            name="objectEmail"
-            id="objectEmail"
-            placeholder="Objet"
-            value={objectEmail}
-            onChange={changeObjectEmail}
-          />
-
-          <textarea
-            className={`contact_form_input ${!story && shakeFields && 'shake'}`}
-            id="story"
-            name="story"
-            rows="3"
-            cols="20"
-            placeholder="Message*"
-            value={story}
-            onChange={changeStory}
-          ></textarea>
-          
-          <input
-            className="contact_form_input validButton"
-            type="submit"
-            value="Valider"
-            onClick={submitContact}
-          />
-        </form>
-      </div>
-    </div>
+    </main>
   );
 }

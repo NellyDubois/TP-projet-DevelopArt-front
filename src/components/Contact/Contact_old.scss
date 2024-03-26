@@ -6,23 +6,24 @@
 }
 
 .Toastify {
-  position: fixed; // Fixe la position de la pop-up
+  position: fixed;
 }
 
 .contact_form_input.shake {
-  animation: shake 0.3s; // Animation de secousse pour l'input
-  border: 1px solid rgb(158, 5, 5); // Bordure rouge pour l'input
+  animation: shake 0.3s;
+  border: 1px solid rgb(158, 5, 5);
 }
 
 .contact_form_input.shake::placeholder {
-  color: rgb(158, 5, 5); // Couleur rouge pour le placeholder
+  color: rgb(158, 5, 5);
 }
 
 .contact {
-  margin: 2rem auto; // Centrage horizontal avec marge en haut
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 auto;
 }
 
 .contact_title {
@@ -30,26 +31,30 @@
   margin-bottom: 4rem; // Ajouter une marge en bas
 }
 
+
 .contact_sections {
   width: 80%;
   margin:auto;
   display: flex;
-  justify-content: space-evenly; // Espacement égal entre les éléments
-  gap:4rem; // Espace entre les éléments
+  justify-content: space-evenly;
+  gap:4rem;
 }
 
+
 .contact_adress {
-  margin-left:0; // Supprime la marge à gauche
+  margin-left:0;
   display: flex;
   flex-direction: column;
+  // align-items: flex-start; // Aligne les éléments enfants le long de leur bord supérieur
+  // justify-content: center;  
 }
 
 .li-logo {
   display: flex;
   align-items: center; // Centre les éléments enfants verticalement
   gap: 0.2rem; // Ajoute un espace entre les éléments enfants
-  text-align: center; // Centrer le texte
-}
+  text-align: center;
+ }
 
 /* Animation de secousse */
 @keyframes shake {
@@ -61,19 +66,42 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .contact_adress,
-  .contact_map,
-  .contact_form {
-    margin-left:0; // Supprime la marge à gauche
+  .contact {
+    margin-top: 2rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .contact_adress {
+    margin-left:0;
+    display: flex;
+    flex-direction: column;
+    // align-items: flex-start; // Aligne les éléments enfants le long de leur bord supérieur
+    // justify-content: center;
     width: 90%; // Utilise toute la largeur disponible
     max-width: 800px; // Limite la largeur maximale   
   }
 
+  .contact_map {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width:90%;
+    max-width: 800px;
+  }
+
   .google_map {
     width: 80vw;
-    margin: auto; // Centrage horizontal
+    margin: auto;
+  }
+
+  .contact_form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    width:90%;
+    max-width:800px;
   }
 
   .contact_form_input {
@@ -83,18 +111,19 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 0.3rem;
+    background: rgb(255, 255, 255);
     background: linear-gradient(
       90deg,
       rgba(255, 255, 255, 1) 0%,
       rgba(110, 110, 110, 0.5) 100%,
       rgba(0, 0, 0, 1) 100%
-    ); // Dégradé pour l'arrière-plan
+    );
   }
 
   .Toastify__toast-container {
     bottom: 1rem; // Réduire la marge inférieure pour placer la pop-up plus haut sur l'écran
     left: 50%; // Centrage horizontal
-    transform: translateX(-50%); // Centrage horizontal
+    transform: translateX(-50%);
   }
 
   .contact_sections {
@@ -108,70 +137,79 @@
 
   .contact_title {
     margin-bottom: 1rem; // Réduire la marge inférieure du h1
-    margin-top: 1rem; // Ajouter une marge en haut
+    margin-top: 1rem;
   }
 
   .validButton {
     width: auto; // Ajuste la largeur du bouton à son contenu
-    margin-top: 1rem; // Ajouter une marge en haut
+    margin-top: 1rem;
   }
 }
 
 @media only screen and (min-width: 769px) {
   .contact {
-    font-size: 1.5rem; // Augmente la taille de police
+    font-size: 1.5rem;
     display: flex;
-    justify-content: space-evenly; // Espacement égal entre les éléments
-    padding: 2rem; // Ajoute du padding
-    min-height: 70vh; // Hauteur minimale
+    justify-content: space-evenly;
+    padding: 2rem;
+    min-height: 70vh;
+  }
+
+  .contact_map {
+    color: black;
   }
 
   .contact_form_input {
-    border-radius: 15px; // Bord arrondi pour l'input
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
-    margin-bottom: 5px; // Ajoute une marge en bas
+    margin-bottom: 5px;
+    background: rgb(255, 255, 255);
     background: linear-gradient(
       90deg,
       rgba(255, 255, 255, 1) 0%,
       rgba(110, 110, 110, 0.5) 100%,
       rgba(0, 0, 0, 1) 100%
-    ); // Dégradé pour l'arrière-plan
+    );
   }
 
   .validButton {
-    width: 10rem; // Largeur fixe pour le bouton
-    height: 3rem; // Hauteur fixe pour le bouton
-    font-weight: bolder; // Police en gras
-    padding-top: 0.4rem; // Ajoute du padding en haut
+    width: 10rem;
+    height: 3rem;
+    font-weight: bolder;
+    padding-top: 0.4rem;
+    background: rgb(255, 255, 255);
     background: linear-gradient(
       90deg,
       rgba(255, 255, 255, 1) 0%,
       rgba(110, 110, 110, 0.5) 100%,
       rgba(0, 0, 0, 1) 100%
-    ); // Dégradé pour l'arrière-plan
+    );
   }
 
   .custom-info-window {
-    color: black; // Couleur du texte
-    background-color: white; // Couleur de fond
-    padding: 10px; // Ajoute du padding
-    border-radius: 5px; // Bord arrondi pour la fenêtre d'information
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Ombre pour la fenêtre d'information
+    color: black;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 
-  .success-message,
+  .success-message {
+    font-size: 1rem;
+  }
+
   .error-message {
-    font-size: 1rem; // Taille de police pour les messages
+    font-size: 1rem;
   }
 
   .Toastify__toast-container {
     bottom: 2rem; // Positionnement au bas de la page
     left: 50%; // Centrage horizontal
-    transform: translateX(-50%); // Centrage horizontal
-  }
+    transform: translateX(-50%);
+    }
 
   .tab {
-    padding-left: 0.2rem; // Ajoute du padding à gauche
+    padding-left: 0.2rem;
   }
 }

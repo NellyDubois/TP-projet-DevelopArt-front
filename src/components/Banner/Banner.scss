@@ -1,8 +1,5 @@
 .banner {
   height: 35vh;
-
-  // background-image: url('../../../public/img/plantes.jpg');
-
   background-image: url('/img/plantes.jpg');
   display: flex;
   align-items: center;
@@ -20,12 +17,6 @@
   padding-top: 1%;
 }
 
-// .banner_img {
-//   display: block;
-//   width: 15%;
-//   margin: auto;
-//   padding-top: 5%;
-// }
 
 @media only screen and (max-width: 400px) {
   // .banner_title {

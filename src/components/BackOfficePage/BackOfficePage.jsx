@@ -326,11 +326,11 @@ export default function BackOfficePage() {
       <form className="backOffice_form" action="post" onSubmit={configRegister}>
         <fieldset className="fieldset police">
           <legend className="legend_police">Police</legend>
-
+          {/* Choix de la police  */}
           <label htmlFor="fontChoice">Choisis une police: </label>
           <select
             name="fontChoice"
-            id=""
+            id="fontChoice"
             onChange={fontSwitch}
             value={fontType}
           >
@@ -359,7 +359,7 @@ export default function BackOfficePage() {
               Righteous
             </option>
           </select>
-
+          {/* Choix de la couleur de police  */}
           <label htmlFor="fontColor">Choisis une couleur de police: </label>
           <input
             type="color"
@@ -370,9 +370,9 @@ export default function BackOfficePage() {
           />
         </fieldset>
 
+      {/* Choix de la couleur de fond  */}
         <fieldset className="fieldset backgroundColor">
           <legend className="legend_backgroundColor">Couleur de fond</legend>
-
           <label htmlFor="">Choisis une couleur de fond: </label>
           <input
             type="color"
@@ -382,12 +382,11 @@ export default function BackOfficePage() {
             value={backgroundColor}
           />
         </fieldset>
-
+        {/* Choix de la couleur de fond de la barre de navigation  */}
         <fieldset className="fieldset backgroundColorNav">
           <legend className="legend_backgroundColorNav">
             Couleur de fond de la barre de navigation
           </legend>
-
           <label htmlFor="">
             Choisis une couleur de fond de la barre de navigation:{' '}
           </label>
@@ -402,7 +401,6 @@ export default function BackOfficePage() {
 
         <fieldset className="fieldset logoChoice">
           <legend className="legend_logo">Logo</legend>
-
           <label htmlFor="">Choisis un logo :</label>
           <select name="logoChoice" id="" onChange={logoChoice} value={logo}>
             <option
@@ -423,13 +421,14 @@ export default function BackOfficePage() {
           </select>
         </fieldset>
 
+        {/* Choix du curseur de souris  */}
         <fieldset className="fieldset cursor">
           <legend className="legend_cursor">Curseur</legend>
 
           <label htmlFor="cursorChoice">Choisis ton curseur </label>
           <select
             name="cursorChoice"
-            id=""
+            id="cursorChoice"
             onChange={cursorChoice}
             value={cursor}
           >
@@ -452,13 +451,13 @@ export default function BackOfficePage() {
           </select>
         </fieldset>
 
+        {/* Choix de la bannière */}
         <fieldset className="fieldset">
           <legend className="legend_banner">Bannière</legend>
-
           <label htmlFor="bannerChoice">Choisis ta bannière</label>
           <select
             name="bannerChoice"
-            id=""
+            id="bannerChoice"
             onChange={bannerChoice}
             value={banner}
           >
@@ -841,10 +840,8 @@ export default function BackOfficePage() {
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleDeleteCategorySubmit}>Oui</Button>
-          <Button onClick={handleClose} autoFocus>
-            Non
-          </Button>
+          <Button onClick={handleDeleteCategorySubmit} aria-label="Confirmer la suppression">Oui</Button>
+          <Button onClick={handleClose} autoFocus aria-label="Annuler la suppression">Non</Button>
         </DialogActions>
       </Dialog>
     </div>

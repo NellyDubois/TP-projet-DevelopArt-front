@@ -20,15 +20,15 @@ console.log("logoUrl",logoUrl);
   };
   
   return (
-    <div className="banner" style={bannerStyle}>
+    <header className="banner" style={bannerStyle}>
       <Link to="/" className="banner_logo_link">
         <img
           className="banner_logo"
           src={logoUrl}
-          alt="logo de Develop Art"
+          alt="Logo de Develop Art, retour à la page d'accueil"
         />
       </Link>
-  {/* Contenu de la bannière */}
-</div>
+      {/* Contenu de la bannière */}
+    </header>
   );
 }
