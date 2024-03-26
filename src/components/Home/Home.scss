@@ -236,8 +236,16 @@
   }
 
   .container_photo {
-    max-width: 100%;
-    margin: 1.5rem;
+    flex: 1 0 calc(33.33% - 2rem); /* pour définir la même largeur pour toutes les photos. 33.33% pour trois photos, 2rem pour tenir compte des marges */
+    max-width: calc(33.33% - 2rem); /* pour s'assurer que les photos ne dépassent pas une certaine largeur */
+    margin: 1rem; /* pour créer un espace entre les photos */
+  }
+
+  /*si les images ne font pas la même largur, s'assurer que l'image couvre toute la zone de la div sans distorsion, mais une partie de l'image peut être coupée
+  .container_photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   /*Le deuxième enfant direct de .container_presa_oeuvres sera aligné au bas du conteneur.*/
