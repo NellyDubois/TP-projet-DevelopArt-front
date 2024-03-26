@@ -1,0 +1,30 @@
+/*Création d'un spinner de chargement à partir d'une imgage*/
+
+@keyframes spin {
+    0% { 
+      transform: rotate(0deg); // Commence à 0 degrés
+    }
+    100% { 
+      transform: rotate(360deg); // Finit à 360 degrés, ce qui donne une rotation complète
+    }
+  }
+  
+  .loading {
+    display: flex; // Utilise flexbox pour le positionnement
+    flex-direction: column; // Les éléments enfants sont empilés verticalement
+    justify-content: center; // Centre les éléments enfants verticalement
+    align-items: center; // Centre les éléments enfants horizontalement
+    height: 100vh; // Prend toute la hauteur de la fenêtre de visualisation
+  
+    p {
+      margin-bottom: 20px; // Ajoute un espace en dessous du texte
+      font-size: 2rem; // Définit la taille du texte
+      color: #c26c10// Définit la couleur du texte
+    }
+  
+    &__spinner {
+      width: 50px; // Définit la largeur du spinner
+      height: 50px; // Définit la hauteur du spinner
+      animation: spin 2s linear infinite; // Applique l'animation spin au spinner
+    }
+  }
