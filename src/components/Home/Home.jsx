@@ -169,19 +169,22 @@ export default function Home() {
             ))
           }
         </section>
+
+        {/* Composant de la bibliothèque react-toastify pour afficher des notifications à l'utilisateur.*/}
         <ToastContainer
-          position="bottom-center"
-          autoClose={5000}
-          hideProgressBar={false}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-          theme="dark"
+          position="bottom-center" //notifications en bas de l'écran
+          autoClose={5000}         //notifications disparaissent après 5 secondes
+          hideProgressBar={false}  //avec l'affichage d'une barre de progression
+          newestOnTop={false}      //les nouvelles notifications apparaissent en dessous des anciennes
+          closeOnClick             //fermeture de la notification au clic
+          rtl={false}              //texte de gauche à droite
+          pauseOnFocusLoss         //pause de la notification lors de la perte de focus
+          draggable               //déplacement de la notification
+          pauseOnHover          //pause de la notification au survol  
+          theme="dark"          //thème sombre
         />
 
+        {/*Composant Dialog de la bibliothèque Material-UI pour afficher une boîte de dialogue de confirmation de suppression d'une oeuvre d'art.*/}
         <Dialog
           open={open}
           onClose={handleClose}
