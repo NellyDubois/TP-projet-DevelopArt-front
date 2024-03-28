@@ -2,7 +2,7 @@ const artworkHomepageUpdateMiddleware = (store) => (next) => (action) => {
   if (action.type === 'UPDATE_ARTWORK_HOMEPAGE') {
     const id = store.getState().artworkHomepage.id;
     const categoryNames = store.getState().artworkHomepage.categoryNames; 
-    console.log(categoryNames);
+    
     fetch(`${process.env.REACT_APP_BASE_URL_BACK}/1/oeuvres/${id}`, {
       method: 'PATCH',
       headers: {
@@ -25,7 +25,7 @@ const artworkHomepageUpdateMiddleware = (store) => (next) => (action) => {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log("le retour du PATCH de l'oeuvre est", data);
+        // console.log("le retour du PATCH de l'oeuvre est", data);
       });
   }
 

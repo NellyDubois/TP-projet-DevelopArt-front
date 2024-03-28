@@ -52,7 +52,6 @@ const configurationSlice = createSlice({
       };
     },
     updateCursor: (state, action) => {
-      console.log('Updating cursor with URL:', action.payload);
       return {
         ...state,
         cursor: `url(${action.payload}), auto`,

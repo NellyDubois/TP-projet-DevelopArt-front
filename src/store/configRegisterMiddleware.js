@@ -9,8 +9,6 @@ const configRegisterMiddleware = (store) => (next) => (action) => {
     const bannerPath = state.configuration.banner.replace(baseUrl, '');
     const logoPath = state.configuration.logo.replace(baseUrl, '');
 
-    console.log('Cursor path:', cursorPath); // Affiche le chemin du curseur
-
     fetch(`${baseUrl}/1/configuration`, {
       method: 'PATCH',
       headers: {
@@ -29,14 +27,8 @@ const configRegisterMiddleware = (store) => (next) => (action) => {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log('le retour de PATCH est', data);
-
-        // const dataConfig = updateBackground(data);
-
-        // store.dispatch(dataConfig);
+        console.log('le retour de PATCH est', data);       
       });
-
-    // next(action);
   }
 
   next(action);

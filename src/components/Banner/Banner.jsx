@@ -8,10 +8,6 @@ export default function Banner() {
 const bannerImage = useSelector((state) => state.configuration.banner);
 const logoUrl = useSelector((state) => state.configuration.logo);
 
-console.log("bannerImage",bannerImage);
-console.log("logoUrl",logoUrl);
-
-
   const bannerStyle = {
     backgroundImage: `url(${bannerImage})`,
     backgroundSize: 'cover',

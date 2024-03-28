@@ -1,4 +1,4 @@
-/* Le composant Gallery.jsx utilise le useSelector pour extraire les données des oeuvres d'art depuis le store Redux, et il les affiche ensuite dans l'interface utilisateur en fonction de ces données. Lorsque le composant Gallery est monté, il déclenche l'action 'ARTWORK_GALLERY' qui est interceptée par le middleware artworkMiddleware, déclenchant ainsi la récupération des données des oeuvres d'art depuis l'API backend. Une fois les données récupérées et mises à jour dans le store Redux, le composant Gallery est mis à jour pour afficher les nouvelles données.*/
+/* Le composant Gallery.jsx utilise le useSelector pour extraire les données des oeuvres d'art depuis le store Redux, et il les affiche ensuite dans l'interface utilisateur en fonction de ces données. Lorsque le composant Gallery est monté, il déclenche l'action 'ARTWORK_BY_CATEGORY' qui est interceptée par le middleware artworkByCategoryMiddleware, déclenchant ainsi la récupération des données des oeuvres d'art depuis l'API backend. Une fois les données récupérées et mises à jour dans le store Redux, le composant Gallery est mis à jour pour afficher les nouvelles données.*/
 
 /* Import des hooks useSelector et useDispatch depuis la bibliothèque react-redux, permettant au composant d'accéder au store Redux et de dispatcher des actions.*/
 import { useSelector, useDispatch } from 'react-redux';
@@ -36,8 +36,7 @@ import 'react-toastify/dist/ReactToastify.css';
 export default function Gallery() {
   /* Utilisation du hook useDispatch pour récupérer la fonction dispatch permettant de dispatcher des actions vers le store Redux.*/
   const dispatch = useDispatch();
-
-  //au chargement de la page, on fait un appel au middleware qui appellera toutes les catégories, dans le but de toutes les récupérer pour boucler dessus pour les afficher :
+  
   /*useEffect est un hook de gestion des effets. Il indique que le code à l'intérieur de la fonction fléchée sera exécuté chaque fois que le composant est monté(=ajouté au DOM) (lors de son premier rendu) et à chaque fois que les dépendances, passées en deuxième argument (ici un tableau vide []), changent. Dans ce cas, étant donné que le tableau de dépendances est vide, cela signifie que le code à l'intérieur de useEffect ne sera exécuté qu'une seule fois après le rendu initial du composant.*/
   useEffect(() => {
     /*crée une action Redux avec le type 'ALL_CATEGORY', indiquant une action qui déclenche categoryMiddleware pour récupérer toutes les catégories disponibles. Cette action sera envoyée au store Redux pour déclencher une mise à jour des catégories dans l'application.*/
@@ -47,7 +46,7 @@ export default function Gallery() {
     /*crée une autre action Redux avec le type 'ARTWORK_BY_CATEGORY'pour récupérer des oeuvres d'art en fonction de leur catégorie. Tout comme l'action précédente, cette action sera également envoyée au store Redux pour déclencher une mise à jour des données des oeuvres d'art.*/
     const actionArt = { type: 'ARTWORK_BY_CATEGORY' };
     dispatch(actionArt); /*envoie l'action actionArt au store Redux en utilisant la fonction dispatch. Cela déclenchera également une mise à jour des données des oeuvres d'art dans le store Redux, ce qui pourrait entraîner une mise à jour de l'interface utilisateur si des composants écoutent ces changements de données.*/
-  }, []); /*[ ] comme tableau de dépendances dans useEffect indique que l'effet doit être exécuté une seule fois après le montage initial du composant, et il ne sera pas réexécuté à moins que le composant ne soit démonté puis remonté.*/
+  }, []); /*[] comme tableau de dépendances dans useEffect indique que l'effet doit être exécuté une seule fois après le montage initial du composant, et il ne sera pas réexécuté à moins que le composant ne soit démonté puis remonté.*/
 
   // Récupération du tableau de catégories depuis le store Redux en utilisant le hook useSelector. Ce tableau sera utilisé pour afficher les différentes catégories dans l'interface utilisateur.
   const category = useSelector((state) => state.category.list);

@@ -22,7 +22,6 @@ const authMiddleware = (store) => (next) => (action) => {
         return res.json();
       })
       .then((data) => {
-        console.log(data);
         const loginAction = handleSuccessfulLogin(data);
         store.dispatch(loginAction);
       })
