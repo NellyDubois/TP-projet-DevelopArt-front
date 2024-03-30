@@ -56,7 +56,6 @@ export default function CustomModal({ artwork, onClose }) {
   const [newArtworkMedia, setNewArtworkMedia] = useState(artwork.media);
   const [newArtworkOrientation, setNewArtworkOrientation] = useState(artwork.orientation);
   const [newArtworkProductionYear, setNewArtworkProductionYear] = useState(dateUtils(artwork.production_year));
-  console.log("newArtworkProductionYear",newArtworkProductionYear);
   const [newArtworkQuote, setNewArtworkQuote] = useState(artwork.quote);
   const [newArtworkTechnique, setNewArtworkTechnique] = useState(artwork.technique);
   const [newArtworkCategoryNames, setNewArtworkCategoryNames] = useState(artwork.categories);
