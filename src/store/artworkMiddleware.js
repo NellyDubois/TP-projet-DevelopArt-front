@@ -16,7 +16,6 @@ const artworkMiddleware = (store) => (next) => (action) => {
       .then((response) => response.json()) // convertit la réponse en JSON
       .then((data) => { //méthode appelée avec les données JSON récupérées. À l'intérieur de cette fonction, les données sont utilisées pour créer une action updateArtworkList, qui mettra à jour la liste des oeuvres d'art dans le store Redux.
         const artData = updateArtworkList(data);
-        console.log('artData', artData);
         store.dispatch(artData); //dispatche l'action créée à partir des données des oeuvres d'art récupérées vers le store Redux.Une fois dans le store, l'action déclenchera les réducteurs appropriés pour mettre à jour l'état de l'application en conséquence, permettant ainsi à l'interface utilisateur de refléter les nouvelles données récupérées.
 
       });
