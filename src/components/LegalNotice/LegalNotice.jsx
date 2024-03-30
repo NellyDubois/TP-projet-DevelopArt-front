@@ -1,6 +1,9 @@
+// Import des styles spécifiques à ce composant
 import './LegalNotice.scss';
 
+//Définition du composant LegalNotice
 export default function LegalNotice() {
+  //Rendu du composant
   return (
     <article className="legalNotice">
       <h2 className="legalNotice_title">Mentions Légales</h2>

@@ -1,6 +1,7 @@
+// Import de la fonction pour télécharger une œuvre d'art sur le serveur
 import { uploadArtworkToServer } from './apiUtils';
 
-// La soumission du formulaire de téléchargement d'image déclenche la fonction handleSubmit, qui prend en paramètres les données du formulaire
+// Fonction pour gérer la soumission du formulaire de téléchargement d'image
 export const handleSubmitForm = async (formData) => {
   // Création d'un objet FormData pour envoyer les données du formulaire et le fichier
   const formDataToSend = new FormData();
@@ -10,7 +11,7 @@ export const handleSubmitForm = async (formData) => {
   Object.entries(formData.data).forEach(([key, value]) => {
     formDataToSend.append(key, value);
   });
-  //Avant l'envoi des données, la fonction uploadArtworkToServer est appelée. 
-  //Cette fonction est responsable de l'envoi des données et du fichier vers le serveur via un appel fetch
+  // Avant l'envoi des données, la fonction uploadArtworkToServer est appelée
+  // Cette fonction est responsable de l'envoi des données et du fichier vers le serveur via un appel fetch
   return uploadArtworkToServer(formDataToSend);
 };

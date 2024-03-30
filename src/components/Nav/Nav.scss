@@ -1,4 +1,9 @@
+// Import du module 'sass:color' qui fournit des fonctions pour manipuler les couleurs dans Sass.
+// Par exemple, il permet de changer la luminosité, la saturation, la teinte, etc. d'une couleur.
 @use 'sass:color';
+
+// Import du fichier '_variables.scss' qui se trouve dans le dossier 'src/styles'.
+// L'utilisation de '@use' permet d'importer ces variables et de les utiliser dans ce fichier.
 @use 'src/styles/_variables';
 
 .header_nav {

@@ -1,5 +1,7 @@
+// Import des styles spécifiques à ce composant
 import './NotFound.scss';
 
+// Définition du composant NotFound
 export default function NotFound() {
   return (
     <div className="notFound">

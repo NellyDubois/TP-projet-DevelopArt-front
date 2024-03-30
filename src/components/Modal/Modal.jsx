@@ -1,4 +1,8 @@
+// Import des hooks nécessaires de React et Redux
 import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+
+// Import des composants nécessaires de Material UI
 import {
   Modal,
   Button,
@@ -12,8 +16,8 @@ import {
   TextareaAutosize,
   Chip,
 } from '@mui/material';
-import { useDispatch, useSelector } from 'react-redux';
-import { dateUtils } from '../../utils/dateUtils';
+
+// Import des actions nécessaires du slice artworkHomepage
 import {
   updateId,
   updateDescription,
@@ -28,33 +32,33 @@ import {
   updateQuote,
   updateCategories,
 } from '../../store/artworkHomepageSlice';
+
+// Import des styles spécifiques à ce composant
 import './Modal.scss';
 
+// Définition du composant CustomModal
 export default function CustomModal({ artwork, onClose }) {
+
+  // Utilisation du hook useDispatch pour pouvoir dispatcher des actions
   const dispatch = useDispatch();
+
+  // Utilisation du hook useSelector pour accéder à l'état du store Redux
   const categories = useSelector((state) => state.categoriesArtist.list);
+
+  // Définition des états locaux pour chaque champ du formulaire
   const [newArtworkName, setNewArtworkName] = useState(artwork.name);
-  const [newArtworkDescription, setNewArtworkDescription] = useState(
-    artwork.description
-  );
+  const [newArtworkDescription, setNewArtworkDescription] = useState(artwork.description);
   const [newArtworkFraming, setNewArtworkFraming] = useState(artwork.framing);
   const [newArtworkWidth, setNewArtworkWidth] = useState(artwork.width);
   const [newArtworkHeight, setNewArtworkHeight] = useState(artwork.height);
   const [newArtworkMedia, setNewArtworkMedia] = useState(artwork.media);
-  const [newArtworkOrientation, setNewArtworkOrientation] = useState(
-    artwork.orientation
-  );
-  const [newArtworkProductionYear, setNewArtworkProductionYear] = useState(
-    dateUtils(artwork.production_year)
-  );
+  const [newArtworkOrientation, setNewArtworkOrientation] = useState(artwork.orientation);
+  const [newArtworkProductionYear, setNewArtworkProductionYear] = useState(artwork.production_year);
   const [newArtworkQuote, setNewArtworkQuote] = useState(artwork.quote);
-  const [newArtworkTechnique, setNewArtworkTechnique] = useState(
-    artwork.technique
-  );
-  const [newArtworkCategoryNames, setNewArtworkCategoryNames] = useState(
-    artwork.categories
-  );
+  const [newArtworkTechnique, setNewArtworkTechnique] = useState(artwork.technique);
+  const [newArtworkCategoryNames, setNewArtworkCategoryNames] = useState(artwork.categories);
 
+  // Définition des fonctions de gestion des changements pour chaque champ du formulaire
   const handleNameChange = (event) => {
     setNewArtworkName(event.target.value);
   };
@@ -90,8 +94,9 @@ export default function CustomModal({ artwork, onClose }) {
     setNewArtworkCategoryNames(selectedCategories);
   };
 
+  // Fonction pour gérer la soumission du formulaire
   const handleSubmit = () => {
-    const action = { type: 'UPDATE_ARTWORK_HOMEPAGE' };
+    // Dispatch des actions pour mettre à jour chaque champ de l'œuvre d'art dans le store Redux
     dispatch(updateId(artwork.id));
     dispatch(updateDescription(newArtworkDescription));
     dispatch(updateName(newArtworkName));
@@ -104,10 +109,14 @@ export default function CustomModal({ artwork, onClose }) {
     dispatch(updateMedia(newArtworkMedia));
     dispatch(updateProductionYear(newArtworkProductionYear));
     dispatch(updateCategories(newArtworkCategoryNames));
-    dispatch(action);
+
+    // Dispatch de l'action pour mettre à jour l'œuvre d'art dans le store Redux
+    dispatch({ type: 'UPDATE_ARTWORK_HOMEPAGE' });
+    // Appel de la fonction onClose pour fermer la fenêtre modale
     onClose();
   };
 
+  // Rendu du composant
   return (
     <Modal
       open={true}
@@ -176,6 +185,7 @@ export default function CustomModal({ artwork, onClose }) {
             id="orientation"
             value={newArtworkOrientation}
             onChange={handleOrientationChange}
+            aria-label="Orientation de l'œuvre"
           >
             <MenuItem value="portrait">Portrait</MenuItem>
             <MenuItem value="paysage">Paysage</MenuItem>
@@ -189,6 +199,8 @@ export default function CustomModal({ artwork, onClose }) {
             value={newArtworkCategoryNames.length > 0 ? newArtworkCategoryNames : []}
             onChange={handleCategoriesChange}
             multiple
+            aria-label="Catégories de l'œuvre"
+            // renderValue affiche une puce pour chaque catégorie sélectionnée avec un fond coloré correspondant à la couleur de la catégorie
             renderValue={(selected) => (
               <div>
                 {newArtworkCategoryNames && selected.map((value) => {
@@ -219,6 +231,7 @@ export default function CustomModal({ artwork, onClose }) {
             <Checkbox
               checked={newArtworkFraming}
               onChange={handleFramingChange}
+              aria-label="Encadré"
             />
           }
           label="Encadré"
@@ -230,6 +243,7 @@ export default function CustomModal({ artwork, onClose }) {
           value={newArtworkDescription}
           onChange={handleDescriptionChange}
           style={{ width: '100%', marginBottom: '1rem' }}
+          aria-label="Description de l'œuvre"
         />
         <div className="modal-buttons">
           <Button

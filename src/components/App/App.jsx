@@ -1,4 +1,4 @@
-/* Ce composant est le composant principal de l'application. Il définit la structure de base de l'nterface utilisateur, en incluant des composants tels que la barre de navigation, le contenu principal et le pied de page. Ce fichier définit également les routes de l'application à l'aide de composants React Router, ce qui permet à l'application de naviguer entre différentes pages.*/
+/* Ce composant est le composant principal de l'application. Il définit la structure de base de l'interface utilisateur, en incluant des composants tels que la barre de navigation, le contenu principal et le pied de page. Ce fichier définit également les routes de l'application à l'aide de composants React Router, ce qui permet à l'application de naviguer entre différentes pages.*/
 
 /*ici on importe Routes pour faire fonctionner le router, et le hook useLocation qui nous permettra de savoir sur quelle page nous sommes pour pouvoir ramener le user en haut de cette page avec window.scrollTo */
 import { Routes, Route, useLocation } from 'react-router';
@@ -27,7 +27,6 @@ import Contact from '../Contact/Contact';
 import artworks from '../../data/dataArtwork';
 import BackOfficePage from '../BackOfficePage/BackOfficePage';
 import LegalNotice from '../LegalNotice/LegalNotice';
-import StatisticsPage from '../StatisticsPage/StatisticsPage';
 import Details from '../Details/Details';
 import NotFound from '../NotFound/NotFound';
 import LoginPage from '../LoginPage/LoginPage';
@@ -129,10 +128,7 @@ function App() {
           {/* Les routes ci-dessous ne seront rendues que si un token utilisateur est disponible, ce qui indique que l'utilisateur est connecté. */}
           {token && (
             <Route path="/:artiste/personnalisation" element={<BackOfficePage />} />
-          )}
-          {token && (
-            <Route path="/:artiste/statistiques" element={<StatisticsPage />} />
-          )}
+          )}          
           <Route path="*" element={<NotFound />} />
         </Routes>
         <ScrollToTop />
