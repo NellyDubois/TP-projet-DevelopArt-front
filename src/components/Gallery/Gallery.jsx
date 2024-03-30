@@ -166,6 +166,7 @@ export default function Gallery() {
       },
     });
   }
+ 
   /*Rendu du composant Gallery: Elle renvoie une structure HTML JSX qui affiche la galerie d'art*/
   return (
     <main className="gallery" aria-label={`Galerie de ${artist.firstname} ${artist.lastname}`}>
@@ -193,7 +194,7 @@ export default function Gallery() {
             {category.map((item) => (
               <li key={item.id}>
                 <button
-                  key={item.id}
+                  // key={item.id}
                   className="buttonCategory"
                   onClick={() => setSelectedCategory(item.name)} // Lorsque l'utilisateur clique sur le bouton, la catégorie sélectionnée est mise à jour avec la valeur de la catégorie.
                 >
