@@ -23,7 +23,7 @@ const newCategoryMiddleware = (store) => (next) => (action) => {
     // Ensuite, les données sont affichées dans la console
       .then((response) => response.json())
       .then((data) => {
-        console.log('le retour de POST est', data);
+        // console.log('le retour de POST est', data);
       });
   }
   // Pour passer l'action au middleware suivant dans la chaîne de middleware Redux

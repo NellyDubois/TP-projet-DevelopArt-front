@@ -22,7 +22,7 @@ const categoryUpdateMiddleware = (store) => (next) => (action) => {
       .then((response) => response.json()) // Conversion de la réponse en JSON
       .then((data) => {
         // Affichage des données reçues dans la console
-        console.log('le retour de PATCH est', data);
+        // console.log('le retour de PATCH est', data);
       });
   }
   // Si l'action dispatchée n'est pas de type 'UPDATE_CATEGORY', on passe simplement à l'action suivante

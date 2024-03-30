@@ -37,7 +37,7 @@ const configRegisterMiddleware = (store) => (next) => (action) => {
       .then((response) => response.json()) // Conversion de la réponse en JSON
       .then((data) => {
         // Affichage des données reçues dans la console
-        console.log('le retour de PATCH est', data);       
+        // console.log('le retour de PATCH est', data);       
       });
   }
 
