@@ -2,6 +2,8 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
+import { dateUtils } from '../../utils/dateUtils';
+
 // Import des composants nécessaires de Material UI
 import {
   Modal,
@@ -53,7 +55,8 @@ export default function CustomModal({ artwork, onClose }) {
   const [newArtworkHeight, setNewArtworkHeight] = useState(artwork.height);
   const [newArtworkMedia, setNewArtworkMedia] = useState(artwork.media);
   const [newArtworkOrientation, setNewArtworkOrientation] = useState(artwork.orientation);
-  const [newArtworkProductionYear, setNewArtworkProductionYear] = useState(artwork.production_year);
+  const [newArtworkProductionYear, setNewArtworkProductionYear] = useState(dateUtils(artwork.production_year));
+  console.log("newArtworkProductionYear",newArtworkProductionYear);
   const [newArtworkQuote, setNewArtworkQuote] = useState(artwork.quote);
   const [newArtworkTechnique, setNewArtworkTechnique] = useState(artwork.technique);
   const [newArtworkCategoryNames, setNewArtworkCategoryNames] = useState(artwork.categories);
