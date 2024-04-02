@@ -117,7 +117,7 @@ export default function Home() {
       <section className="containerArtiste">
         <header className="container_titreImgArtisteTexte">
           <h1 className="container_titreImgArtisteTexte_h1">
-            ART PICTURES BY {artist.firstname} {artist.lastname}
+            GALERIE D'ART D'{artist.firstname} {artist.lastname}
           </h1>
 
           <div className="container_titreImgArtiste_imgEtPresa">

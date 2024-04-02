@@ -167,12 +167,30 @@ export default function Gallery() {
     });
   }
  
+ // Parcourir la liste 'category'
+ category.forEach((item) => {
+  // Vérifier si l'id de l'élément est 12
+  if (item.id === 12) {
+    // Afficher l'élément
+    console.log(item);
+  }
+});
+
+// Parcourir la liste 'showByCategory(selectedCategory)'
+showByCategory(selectedCategory).forEach((item) => {
+  // Vérifier si l'id de l'élément est 12
+  if (item.id === 12) {
+    // Afficher l'élément
+    console.log(item);
+  }
+});
+
   /*Rendu du composant Gallery: Elle renvoie une structure HTML JSX qui affiche la galerie d'art*/
   return (
     <main className="gallery" aria-label={`Galerie de ${artist.firstname} ${artist.lastname}`}>
       {/* Titre de la galerie */}
       <h1 className="gallery_h1">
-        GALERIE by {artist.firstname} {artist.lastname}
+        Œuvres d'{artist.firstname} {artist.lastname}
       </h1>
 
       {/* Navigation de la galerie : liste des catégories d'œuvres d'art et les œuvres d'art correspondantes */}
