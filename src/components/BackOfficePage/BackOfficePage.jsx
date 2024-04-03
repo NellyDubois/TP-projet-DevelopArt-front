@@ -239,18 +239,21 @@ function showNotification(message, type = 'info') {
     // Soumission du formulaire
     handleSubmitForm({ file, data: formData })
       .then((data) => {
-        setMessage("L'image a bien été téléchargée");
+        // setMessage("L'image a bien été téléchargée");
         showNotification(
           'La nouvelle image a été ajoutée avec succès.',
           'success'
         );
       })
       .catch((error) => {
-        console.error(
-          'Erreur lors de la soumission du formulaire:',
-          error.message
-        );
-        setMessage('Une erreur est survenue');
+          //  if (error==="Seuls les fichiers image sont autorisés!"){
+                showNotification('Seuls les fichiers image sont autorisés', 'error');
+            // 
+          // console.error(
+        //   'Erreur lors de la soumission du formulaire:',
+        //   error.message
+        // );
+        // setMessage('Une erreur est survenue');
       });
   };
 
