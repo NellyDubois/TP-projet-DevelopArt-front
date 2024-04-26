@@ -1,4 +1,4 @@
-# Projet DevelopArt back
+# Projet DevelopArt front
 
 ## Résumé :
 
